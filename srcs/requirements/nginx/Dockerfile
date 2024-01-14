@@ -3,7 +3,9 @@ FROM debian:11
 #mettre a jour apt
 RUN apt-get update && apt-get upgrade
 #Installer les paquets nginx curl et vim
-RUN apt-get install nginx vim curl openssl -y
+RUN apt-get install nginx vim curl openssl --no-install-recommends -y \
+     && apt-get clean \
+     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /etc/nginx/ssl
 
@@ -12,7 +14,11 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt \
     -keyout /etc/nginx/ssl/inception.key  \
     -subj "/C=FR/ST=ARA/L=Lyon/O=42/OU=42/CN=gd-harco.42.fr/UID=gd-harco"
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
+RUN mkdir -p /var/www/gd-harco/public_html;
 
-CMD ["nginx", "-g", "deamon off;"]
+COPY conf/config.conf /etc/nginx/sites-available/gd-harco.42.fr.conf
+COPY testFiles/index.html /var/www/gd-harco/public_html
 
+RUN ln -s /etc/nginx/sites-available/gd-harco.42.fr.conf /etc/nginx/sites-enabled/gd-harco.42.fr.conf
+
+CMD /bin/bash -c 'echo "Launching nginx"; exec nginx -g "daemon off;"'
