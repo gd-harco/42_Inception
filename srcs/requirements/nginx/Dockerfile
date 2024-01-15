@@ -17,7 +17,7 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt \
 RUN mkdir -p /var/www/gd-harco/public_html;
 
 COPY conf/config.conf /etc/nginx/sites-available/gd-harco.42.fr.conf
-COPY testFiles/index.html /var/www/gd-harco/public_html
+COPY testFiles/* /var/www/gd-harco/public_html
 
 RUN ln -s /etc/nginx/sites-available/gd-harco.42.fr.conf /etc/nginx/sites-enabled/gd-harco.42.fr.conf
 

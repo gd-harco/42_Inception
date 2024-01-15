@@ -12,7 +12,17 @@ services:
       dockerfile: Dockerfile
     restart: on-failure
 
+  mariadb:
+    container_name: "mariadb"
+    networks:
+      - inception
+    build:
+      context: requirements/mariadb
+      dockerfile: Dockerfile
+    restart: on-failure
 
 networks:
   inception:
     driver: bridge
+
+    
