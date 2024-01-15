@@ -21,4 +21,4 @@ COPY testFiles/index.html /var/www/gd-harco/public_html
 
 RUN ln -s /etc/nginx/sites-available/gd-harco.42.fr.conf /etc/nginx/sites-enabled/gd-harco.42.fr.conf
 
-CMD /bin/bash -c 'echo "Launching nginx"; exec nginx -g "daemon off;"'
+CMD ["nginx", "-g", "daemon off;"]
