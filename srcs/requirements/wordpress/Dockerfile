@@ -14,8 +14,13 @@ RUN apt-get install -y php\
      && apt-get clean \
      && rm -rf /var/lib/apt/lists/*
 
-RUN wget --no-check-certificate fr.wordpress.org/wordpress-6.4.2-fr_FR.tar.gz -P /var/www
+#TODO PAsser par wordpressCLI comme dis dans le readme de ljhonsonh ttps://github.com/Arkhavy/42_2021_Inception/tree/master
+
+#RUN #wget --no-check-certificate fr.wordpress.org/wordpress-6.4.2-fr_FR.tar.gz -P /var/www
 
 RUN cd /var/www && tar -xzf wordpress-6.4.2-fr_FR.tar.gz && rm wordpress-6.4.2-fr_FR.tar.gz
 
-ENTRYPOINT bash
+COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
+
+RUN mkdir -p /run/php
+CMD ["php-fpm7.4", "-F"]
