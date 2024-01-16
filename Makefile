@@ -1,3 +1,21 @@
+# ********* VAR ******** #
+NAME			=	inception
+
+COMPOSE_PATH	=	srcs/docker-compose.yml
+
+COMP_CMD		=	docker compose
+
+MKDIR			=	mkdir -p
+
+VOLUMES_PATH	=	/home/$(USER)/data
 # ********* RULES ******** #
 
- up	:	docker compose up --build
+all:	up
+
+up:
+	make volumes
+	${COMP_CMD} -f ${COMPOSE_PATH} up --build
+
+volumes:
+	${MKDIR} ${VOLUMES_PATH}/wordpress
+	${MKDIR} ${VOLUMES_PATH}/mariadb
