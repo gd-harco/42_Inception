@@ -19,3 +19,6 @@ up:
 volumes:
 	${MKDIR} ${VOLUMES_PATH}/wordpress
 	${MKDIR} ${VOLUMES_PATH}/mariadb
+
+down:
+	${COMP_CMD} -f ${COMPOSE_PATH} down --rmi all -v --remove-orphans
