@@ -1,5 +1,7 @@
 FROM debian:11
 
+LABEL author="gd-harco"
+
 #mettre a jour apt
 RUN apt-get update && apt-get upgrade
 #Installer les paquets nginx curl et vim

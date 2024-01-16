@@ -1,5 +1,7 @@
 FROM debian:11
 
+LABEL author="gd-harco"
+
 #installer Mariadb
 RUN apt update -y && \
     apt upgrade -y && \
