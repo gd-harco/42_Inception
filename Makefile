@@ -16,6 +16,10 @@ up:
 	make volumes
 	${COMP_CMD} -f ${COMPOSE_PATH} up --build
 
+bg_up:
+	make volumes
+	${COMP_CMD} -f ${COMPOSE_PATH} up --build -d
+
 volumes:
 	${MKDIR} ${VOLUMES_PATH}/wordpress
 	${MKDIR} ${VOLUMES_PATH}/mariadb
