@@ -1,7 +1,13 @@
 version: '3.8'
 
 services:
+
+#  WORDPRESS & PHP
   wordpress:
+    depends_on:
+      - mariadb
+    env_file:
+      - .env
     container_name: "wordpress"
     networks:
       - inception
@@ -11,8 +17,11 @@ services:
     restart: on-failure
     volumes:
       - wordpress:/var/www/html/wordpress
+
   nginx:
     container_name: "nginx"
+    depends_on:
+      - wordpress
     networks:
       - inception
     ports:
