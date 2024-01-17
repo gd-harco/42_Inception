@@ -11,16 +11,26 @@ RUN apt-get install -y php\
 						php-fpm\
 						php-mysql\
 						mariadb-client\
+    					curl\
      && apt-get clean \
      && rm -rf /var/lib/apt/lists/*
 
 #TODO PAsser par wordpressCLI comme dis dans le readme de ljhonsonh ttps://github.com/Arkhavy/42_2021_Inception/tree/master
 
-#RUN #wget --no-check-certificate fr.wordpress.org/wordpress-6.4.2-fr_FR.tar.gz -P /var/www
+#installer wp-cli, le rendre executable et le mettre dans PATH sous la commande wp
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x wp-cli.phar \
+    && mv wp-cli.phar /bin/wp
 
-RUN cd /var/www && tar -xzf wordpress-6.4.2-fr_FR.tar.gz && rm wordpress-6.4.2-fr_FR.tar.gz
+
+RUN mkdir -p /var/www/html/wordpress
+
+EXPOSE 9000
+
+#TODO Configurer worpress via wpcli
 
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 
 RUN mkdir -p /run/php
+
 CMD ["php-fpm7.4", "-F"]
