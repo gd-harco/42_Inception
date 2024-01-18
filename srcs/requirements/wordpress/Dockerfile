@@ -23,7 +23,8 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     && mv wp-cli.phar /bin/wp
 
 
-RUN mkdir -p /var/www/html/wordpress
+RUN mkdir -p /var/www/html/wordpress && \
+    chmod 777 /var/www/html/wordpress
 
 EXPOSE 9000
 
@@ -31,6 +32,12 @@ EXPOSE 9000
 
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 
+COPY conf/wpconf.php ./wpconf.php
+
+COPY tools/wp_script.sh ./entrypoint.sh
+
+
+
 RUN mkdir -p /run/php
 
-CMD ["php-fpm7.4", "-F"]
+ENTRYPOINT ["php-fpm7.4", "-F"]
