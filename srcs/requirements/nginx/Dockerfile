@@ -5,7 +5,7 @@ LABEL author="gd-harco"
 #mettre a jour apt
 RUN apt-get update && apt-get upgrade
 #Installer les paquets nginx curl et vim
-RUN apt-get install nginx vim curl openssl --no-install-recommends -y \
+RUN apt-get install nginx openssl --no-install-recommends -y \
      && apt-get clean \
      && rm -rf /var/lib/apt/lists/*
 
