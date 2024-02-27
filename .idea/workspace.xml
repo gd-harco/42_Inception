@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb0b0062-7abe-4ed7-85e6-7fa01f8d8f33" name="Changes" comment="removed unrequired packqge installation">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inception.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2alkiw3I1YI0nqEbfqhrZE4YZay" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gd-harco/inception/srcs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Space Code Reviews" show_stripe_button="false" />
+      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
+      <window_info id="Merge Requests" show_stripe_button="false" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Learn" show_stripe_button="false" />
+      <window_info id="Robo tasks" show_stripe_button="false" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2174479" />
+      <window_info id="Commit" order="1" weight="0.2981771" />
+      <window_info id="Welcome to GitHub Copilot" order="2" show_stripe_button="false" weight="0.32994792" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" />
+      <window_info anchor="bottom" id="Find" weight="0.3297822" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems View" order="1" weight="0.34971374" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.39742368" />
+      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="make" side_tool="true" />
+      <window_info anchor="right" id="AIAssistant" order="0" weight="0.3296875" />
+      <window_info anchor="right" id="Database" order="1" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.25" />
+      <window_info anchor="right" id="Notifications" order="3" weight="0.32994792" />
+      <window_info anchor="right" id="github.copilotToolWindow" order="4" show_stripe_button="false" />
+      <window_info anchor="right" id="GitHub Copilot Chat" order="5" weight="0.32994792" />
+    </layout>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/srcs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb0b0062-7abe-4ed7-85e6-7fa01f8d8f33" name="Changes" comment="" />
+      <created>1704900689231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704900689231</updated>
+      <workItem from="1704900697673" duration="595000" />
+      <workItem from="1704973500128" duration="595000" />
+      <workItem from="1704979396879" duration="1875000" />
+      <workItem from="1704986039493" duration="1456000" />
+      <workItem from="1705316318801" duration="3414000" />
+      <workItem from="1705332774771" duration="1510000" />
+      <workItem from="1705399900431" duration="895000" />
+      <workItem from="1705413049658" duration="3668000" />
+      <workItem from="1705585441849" duration="361000" />
+      <workItem from="1705586755849" duration="911000" />
+      <workItem from="1705661271811" duration="628000" />
+      <workItem from="1709027945721" duration="1394000" />
+      <workItem from="1709040765711" duration="1800000" />
+    </task>
+    <task id="LOCAL-00001" summary="Start work on nginx Dockerfile">
+      <option name="closed" value="true" />
+      <created>1704983678800</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704983678800</updated>
+    </task>
+    <task id="LOCAL-00002" summary="various test">
+      <option name="closed" value="true" />
+      <created>1704991905211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704991905211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added network and proper port forwarding, I guess">
+      <option name="closed" value="true" />
+      <created>1705328177572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705328177572</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Makefile">
+      <option name="closed" value="true" />
+      <created>1705412379206</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705412379206</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added Volume to dockercompose">
+      <option name="closed" value="true" />
+      <created>1705412393832</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705412393832</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed mariadb configuration. need to update it with .env variable">
+      <option name="closed" value="true" />
+      <created>1705412416318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705412416318</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added authors label in dockerfile">
+      <option name="closed" value="true" />
+      <created>1705418922354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705418922354</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added fisrt verions of wordpress container">
+      <option name="closed" value="true" />
+      <created>1705419811334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419811334</updated>
+    </task>
+    <task id="LOCAL-00009" summary="try to configure wordpress, spoiler, this doesn't work">
+      <option name="closed" value="true" />
+      <created>1705592559063</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705592559064</updated>
+    </task>
+    <task id="LOCAL-00010" summary="removed unrequired packqge installation">
+      <option name="closed" value="true" />
+      <created>1705592616434</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705592616435</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="nginx.conf" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start work on nginx Dockerfile" />
+    <MESSAGE value="various test" />
+    <MESSAGE value="Added network and proper port forwarding, I guess" />
+    <MESSAGE value="Added Makefile" />
+    <MESSAGE value="Added Volume to dockercompose" />
+    <MESSAGE value="Fixed mariadb configuration. need to update it with .env variable" />
+    <MESSAGE value="Added authors label in dockerfile" />
+    <MESSAGE value="Added fisrt verions of wordpress container" />
+    <MESSAGE value="try to configure wordpress, spoiler, this doesn't work" />
+    <MESSAGE value="removed unrequired packqge installation" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unrequired packqge installation" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

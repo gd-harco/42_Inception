@@ -13,8 +13,9 @@ VOLUMES_PATH	=	/home/$(USER)/data
 all:	up
 
 up:
-	make volumes
-	${COMP_CMD} -f ${COMPOSE_PATH} up --build
+	#make volumes
+	docker build -t nginx ./srcs/requirements/nginx
+	#${COMP_CMD} -f ${COMPOSE_PATH} up --build
 
 bg_up:
 	make volumes
