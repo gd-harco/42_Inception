@@ -25,4 +25,5 @@ volumes:
 	${MKDIR} ${VOLUMES_PATH}/mariadb
 
 down:
-	${COMP_CMD} -f ${COMPOSE_PATH} down --rmi all -v --remove-orphans
+	${COMP_CMD} -f ${git status
+	COMPOSE_PATH} down --rmi all -v --remove-orphans
