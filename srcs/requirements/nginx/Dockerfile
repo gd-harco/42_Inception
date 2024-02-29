@@ -3,13 +3,14 @@ FROM debian:oldstable
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
 #mettre a jour apt
-RUN apt-get update && apt-get upgrade
-
 #Installer nginx et openssl
-RUN	apt-get install nginx openssl --no-install-recommends -y \
+RUN	apt-get update \
+	&& apt-get upgrade \
+	&& apt-get install curl nginx=1.18.0-6.1+deb11u3 openssl=1.1.1w-0+deb11u1 --no-install-recommends -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN mkdir -p /etc/nginx/ssl
 #Generation de la cle SSH et du certificat
 # source : https://www.openssl.org/docs/manmaster/man1/openssl-req.html
 # 	- demande de CSR (Certificat Signing Request)
@@ -23,6 +24,16 @@ RUN openssl req \
 	-x509 \
 	-nodes \
 	-newkey rsa \
-	-keyout /etc/ssl/private/gd-harco.42.fr.key \
-	-out /etc/ssl/certs/gd-harco.42.fr.crt \
+	-keyout /etc/nginx/ssl/gd-harco.42.fr.key \
+	-out /etc/nginx/ssl/gd-harco.42.fr.crt \
 	-subj "/C=FR/ST=Auvergne-Rhone-Alpes/L=Lyon/UID=gd-harco/emailAddress=gd-harco@student.42lyon.fr"
+
+COPY ./conf/default /etc/nginx/sites-available/gd-harco.42.fr.conf
+
+RUN ln -s /etc/nginx/sites-available/gd-harco.42.fr.conf /etc/nginx/sites-enabled/gd-harco.42.fr
+
+RUN rm /etc/nginx/sites-enabled/default
+
+EXPOSE 443
+
+CMD ["nginx", "-g", "daemon off;"]
