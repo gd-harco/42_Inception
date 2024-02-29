@@ -13,9 +13,8 @@ VOLUMES_PATH	=	/home/$(USER)/data
 all:	up
 
 up:
-	#make volumes
-	docker build -t nginx ./srcs/requirements/nginx
-	#${COMP_CMD} -f ${COMPOSE_PATH} up --build
+	make volumes
+	${COMP_CMD} -f ${COMPOSE_PATH} up --build
 
 bg_up:
 	make volumes
@@ -26,5 +25,4 @@ volumes:
 	${MKDIR} ${VOLUMES_PATH}/mariadb
 
 down:
-	${COMP_CMD} -f ${git status
-	COMPOSE_PATH} down --rmi all -v --remove-orphans
+	${COMP_CMD} -f ${COMPOSE_PATH} down --rmi all -v --remove-orphans

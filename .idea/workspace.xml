@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb0b0062-7abe-4ed7-85e6-7fa01f8d8f33" name="Changes" comment="removed unrequired packqge installation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
   <component name="ProjectId" id="2alkiw3I1YI0nqEbfqhrZE4YZay" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -47,7 +47,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gd-harco/inception/srcs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gd-harco/Documents/42/level_5/42_Inception&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -132,6 +132,8 @@
       <workItem from="1709040765711" duration="1800000" />
       <workItem from="1709057189674" duration="305000" />
       <workItem from="1709201733857" duration="624000" />
+      <workItem from="1709220822019" duration="31000" />
+      <workItem from="1709220877610" duration="113000" />
     </task>
     <task id="LOCAL-00001" summary="Start work on nginx Dockerfile">
       <option name="closed" value="true" />
