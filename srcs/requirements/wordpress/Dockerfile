@@ -11,7 +11,7 @@ RUN	apt-get update \
     	php7.3 \
     	php-fpm \
     	php-mysql \
-    	less	\
+    	less \
 #    	mariadb-client \
     	--no-install-recommends -y \
 	&& apt-get clean \
@@ -22,5 +22,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     && mv wp-cli.phar /usr/local/bin/wp
 
 COPY script/wpconfig.sh ./wpconfig.sh
+
+EXPOSE 9000
 
 CMD ["bash", "wpconfig.sh"]

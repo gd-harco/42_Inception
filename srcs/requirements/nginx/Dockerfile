@@ -29,16 +29,13 @@ RUN openssl req \
 	-subj "/C=FR/ST=Auvergne-Rhone-Alpes/L=Lyon/UID=gd-harco/emailAddress=gd-harco@student.42lyon.fr"
 
 #copier le fichier de configuration de notre serveur
-COPY ./conf/default /etc/nginx/sites-available/gd-harco.42.fr.conf
+COPY conf/default.conf /etc/nginx/sites-available/gd-harco.42.fr.conf
 
 #creer un lien symbolique de sites-available vers site-enable
 #pour activer le site.
-#Supprimer le default pour faire bonne figure
+#Supprimer le default.conf pour faire bonne figure
 RUN ln -s /etc/nginx/sites-available/gd-harco.42.fr.conf /etc/nginx/sites-enabled/gd-harco.42.fr
-RUN rm /etc/nginx/sites-enabled/default
-
-# Le conteneur ecoute le port 443
-EXPOSE 443
+#RUN rm /etc/nginx/sites-enabled/default.conf
 
 #lancement de nginx en arriere plan pour pas que le conteneur se ferme apres la commande
 CMD ["nginx", "-g", "daemon off;"]

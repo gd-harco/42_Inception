@@ -6,3 +6,8 @@ wpInstallPath=/var/www/html/
 rm -rf $wpInstallPath
 
 wp core download --path=$wpInstallPath --allow-root
+
+# php-fpm start
+mkdir -p /run/php/
+
+php-fpm7.4 -F
