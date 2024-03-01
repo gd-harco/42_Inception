@@ -2,4 +2,4 @@
 
 wpInstallPath=/var/www/html/wordpress
 
-wp core download --path=$wpInstallPath --allow-root --insecure
+wp core download --path=$wpInstallPath --allow-root

@@ -1,4 +1,4 @@
-FROM debian:oldstable
+FROM debian:11-slim
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
@@ -6,7 +6,7 @@ LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 #Installer nginx et openssl
 RUN	apt-get update \
 	&& apt-get upgrade \
-	&& apt-get install curl nginx=1.18.0-6.1+deb11u3 openssl=1.1.1w-0+deb11u1 --no-install-recommends -y \
+	&& apt-get install curl ca-certificates nginx=1.18.0-6.1+deb11u3 openssl=1.1.1w-0+deb11u1 --no-install-recommends -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 

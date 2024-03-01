@@ -1,4 +1,4 @@
-FROM debian:oldstable
+FROM debian:11-slim
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
@@ -7,6 +7,7 @@ LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 RUN	apt-get update \
 	&& apt-get upgrade \
 	&& apt-get install curl \
+    	ca-certificates \
     	php7.3 \
     	php-fpm \
     	php-mysql \
@@ -15,7 +16,7 @@ RUN	apt-get update \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --insecure \
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
 
