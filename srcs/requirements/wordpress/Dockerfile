@@ -11,6 +11,7 @@ RUN	apt-get update \
     	php7.3 \
     	php-fpm \
     	php-mysql \
+    	less	\
 #    	mariadb-client \
     	--no-install-recommends -y \
 	&& apt-get clean \
