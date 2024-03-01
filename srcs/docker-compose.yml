@@ -13,6 +13,16 @@ services:
     volumes:
       - WordPress:/var/www/html
 
+  #Wordpress &PHP
+  wordpress:
+    container_name: wordpress
+    build:
+      context: requirements/wordpress
+      dockerfile: Dockerfile
+    restart: on-failure
+    volumes:
+      - WordPress:/var/www/html
+
 volumes:
   WordPress:
     driver: local
