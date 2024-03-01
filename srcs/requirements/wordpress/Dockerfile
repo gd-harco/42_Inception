@@ -18,3 +18,7 @@ RUN	apt-get update \
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --insecure \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
+
+COPY script/wpconfig.sh ./wpconfig.sh
+
+CMD ["bash", "wpconfig.sh"]
