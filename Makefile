@@ -12,6 +12,12 @@ VOLUMES_PATH	=	/home/$(USER)/data
 
 all:	up
 
+nginx :
+	docker build srcs/requirements/nginx -t nginx
+
+wp :
+	docker build srcs/requirements/wordpress -t wordpress
+
 up:
 	make volumes
 	${COMP_CMD} -f ${COMPOSE_PATH} up --build
