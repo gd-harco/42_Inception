@@ -17,12 +17,17 @@ RUN	apt-get update \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
+#si commande config create faile, ne pas renommer wp-cli.phar
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
 
 COPY script/wpconfig.sh ./wpconfig.sh
 
+COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
+
+
+#aucune action basique, juste une norme
 EXPOSE 9000
 
 CMD ["bash", "wpconfig.sh"]

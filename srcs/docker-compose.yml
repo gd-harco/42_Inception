@@ -28,8 +28,6 @@ services:
       - inception
     volumes:
       - WordPress:/var/www/html
-    expose:
-      - 9000
 
 volumes:
   WordPress:
