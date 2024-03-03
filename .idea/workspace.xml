@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb0b0062-7abe-4ed7-85e6-7fa01f8d8f33" name="Changes" comment="removed unrequired packqge installation">
+    <list default="true" id="1c67e0f0-f483-46e0-8404-1dcc44e8b1c9" name="Changes" comment="Added first shot at mariadb container. dummy name for value">
+      <change afterPath="$PROJECT_DIR$/srcs/requirements/mariadb/my.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/requirements/mariadb/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/requirements/mariadb/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/requirements/wordpress/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/requirements/wordpress/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/requirements/wordpress/script/wpconfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/requirements/wordpress/script/wpconfig.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,45 +20,35 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dockerfile" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="NamedScopeManager">
-    <scope name="Unnamed" pattern="" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2alkiw3I1YI0nqEbfqhrZE4YZay" />
+  <component name="ProjectId" id="2d5CYgXIllNXJuvf84hqUZlayWZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mysql&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gd-harco/Documents/42/level_5/42_Inception&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -66,154 +61,122 @@
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="Robo tasks" show_stripe_button="false" side_tool="true" />
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.17630208" />
-      <window_info id="Commit" order="1" weight="0.17630208" />
-      <window_info id="Welcome to GitHub Copilot" order="2" show_stripe_button="false" weight="0.32994792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32994792" />
+      <window_info id="Commit" order="1" weight="0.32994792" />
+      <window_info id="Welcome to GitHub Copilot" order="2" show_stripe_button="false" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" weight="0.32967556" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Services" />
-      <window_info anchor="bottom" id="Find" weight="0.3297822" />
+      <window_info anchor="bottom" id="Find" weight="0.32967556" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Problems View" order="1" weight="0.34971374" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32897288" />
+      <window_info anchor="bottom" id="Problems View" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.46612597" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
-      <window_info anchor="right" id="make" side_tool="true" />
-      <window_info anchor="right" id="AIAssistant" order="0" weight="0.3296875" />
-      <window_info anchor="right" id="Database" order="1" weight="0.25" />
-      <window_info anchor="right" id="Gradle" order="2" weight="0.25" />
-      <window_info anchor="right" id="Notifications" order="3" weight="0.32994792" />
+      <window_info anchor="right" id="make" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.2502604" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="github.copilotToolWindow" order="4" show_stripe_button="false" />
       <window_info anchor="right" id="GitHub Copilot Chat" order="5" weight="0.32994792" />
     </layout>
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/srcs" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cb0b0062-7abe-4ed7-85e6-7fa01f8d8f33" name="Changes" comment="" />
-      <created>1704900689231</created>
+      <changelist id="1c67e0f0-f483-46e0-8404-1dcc44e8b1c9" name="Changes" comment="" />
+      <created>1709288613028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704900689231</updated>
-      <workItem from="1704900697673" duration="595000" />
-      <workItem from="1704973500128" duration="595000" />
-      <workItem from="1704979396879" duration="1875000" />
-      <workItem from="1704986039493" duration="1456000" />
-      <workItem from="1705316318801" duration="3414000" />
-      <workItem from="1705332774771" duration="1510000" />
-      <workItem from="1705399900431" duration="895000" />
-      <workItem from="1705413049658" duration="3668000" />
-      <workItem from="1705585441849" duration="361000" />
-      <workItem from="1705586755849" duration="911000" />
-      <workItem from="1705661271811" duration="628000" />
-      <workItem from="1709027945721" duration="1394000" />
-      <workItem from="1709040765711" duration="1800000" />
-      <workItem from="1709057189674" duration="305000" />
-      <workItem from="1709201733857" duration="624000" />
-      <workItem from="1709220822019" duration="31000" />
-      <workItem from="1709220877610" duration="113000" />
+      <updated>1709288613028</updated>
+      <workItem from="1709288618068" duration="8165000" />
+      <workItem from="1709466919979" duration="3844000" />
+      <workItem from="1709479260682" duration="595000" />
     </task>
-    <task id="LOCAL-00001" summary="Start work on nginx Dockerfile">
+    <task id="LOCAL-00001" summary="Added rule in makefile for individual images build">
       <option name="closed" value="true" />
-      <created>1704983678800</created>
+      <created>1709293079324</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1704983678800</updated>
+      <updated>1709293079324</updated>
     </task>
-    <task id="LOCAL-00002" summary="various test">
+    <task id="LOCAL-00002" summary="Added culr, php installation + wp-cli download and install">
       <option name="closed" value="true" />
-      <created>1704991905211</created>
+      <created>1709293107309</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1704991905211</updated>
+      <updated>1709293107309</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added network and proper port forwarding, I guess">
+    <task id="LOCAL-00003" summary="added script fle, currently only download wp core file">
       <option name="closed" value="true" />
-      <created>1705328177572</created>
+      <created>1709298987716</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1705328177572</updated>
+      <updated>1709298987716</updated>
     </task>
-    <task id="LOCAL-00004" summary="Added Makefile">
+    <task id="LOCAL-00004" summary="WP PART : currently launch the script, unusable as is">
       <option name="closed" value="true" />
-      <created>1705412379206</created>
+      <created>1709299101506</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1705412379206</updated>
+      <updated>1709299101506</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added Volume to dockercompose">
+    <task id="LOCAL-00005" summary="Added fuirst draft of WP service in compose">
       <option name="closed" value="true" />
-      <created>1705412393832</created>
+      <created>1709299121960</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1705412393832</updated>
+      <updated>1709299121960</updated>
     </task>
-    <task id="LOCAL-00006" summary="Fixed mariadb configuration. need to update it with .env variable">
+    <task id="LOCAL-00006" summary="Change FROM version, added installation of ca-certificates to removed need for --insecure option in curl">
       <option name="closed" value="true" />
-      <created>1705412416318</created>
+      <created>1709301274829</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1705412416318</updated>
+      <updated>1709301274829</updated>
     </task>
-    <task id="LOCAL-00007" summary="Added authors label in dockerfile">
+    <task id="LOCAL-00007" summary="small progress on wordpress">
       <option name="closed" value="true" />
-      <created>1705418922354</created>
+      <created>1709304654720</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1705418922354</updated>
+      <updated>1709304654720</updated>
     </task>
-    <task id="LOCAL-00008" summary="Added fisrt verions of wordpress container">
+    <task id="LOCAL-00008" summary="502 bad gateway. tester avec un simple index.php qui affiche coucou">
       <option name="closed" value="true" />
-      <created>1705419811334</created>
+      <created>1709311077994</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1705419811334</updated>
+      <updated>1709311077994</updated>
     </task>
-    <task id="LOCAL-00009" summary="try to configure wordpress, spoiler, this doesn't work">
+    <task id="LOCAL-00009" summary="Fixed 502 bad gateway, il fallait listen dans php directement, merci @Eguelin !">
       <option name="closed" value="true" />
-      <created>1705592559063</created>
+      <created>1709467757203</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1705592559064</updated>
+      <updated>1709467757203</updated>
     </task>
-    <task id="LOCAL-00010" summary="removed unrequired packqge installation">
+    <task id="LOCAL-00010" summary="Added first shot at mariadb container. dummy name for value">
       <option name="closed" value="true" />
-      <created>1705592616434</created>
+      <created>1709476628453</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1705592616435</updated>
+      <updated>1709476628453</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
@@ -221,21 +184,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="nginx.conf" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start work on nginx Dockerfile" />
-    <MESSAGE value="various test" />
-    <MESSAGE value="Added network and proper port forwarding, I guess" />
-    <MESSAGE value="Added Makefile" />
-    <MESSAGE value="Added Volume to dockercompose" />
-    <MESSAGE value="Fixed mariadb configuration. need to update it with .env variable" />
-    <MESSAGE value="Added authors label in dockerfile" />
-    <MESSAGE value="Added fisrt verions of wordpress container" />
-    <MESSAGE value="try to configure wordpress, spoiler, this doesn't work" />
-    <MESSAGE value="removed unrequired packqge installation" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unrequired packqge installation" />
+    <MESSAGE value="Added rule in makefile for individual images build" />
+    <MESSAGE value="Added culr, php installation + wp-cli download and install" />
+    <MESSAGE value="added script fle, currently only download wp core file" />
+    <MESSAGE value="WP PART : currently launch the script, unusable as is" />
+    <MESSAGE value="Added fuirst draft of WP service in compose" />
+    <MESSAGE value="Change FROM version, added installation of ca-certificates to removed need for --insecure option in curl" />
+    <MESSAGE value="small progress on wordpress" />
+    <MESSAGE value="502 bad gateway. tester avec un simple index.php qui affiche coucou" />
+    <MESSAGE value="Fixed 502 bad gateway, il fallait listen dans php directement, merci @Eguelin !" />
+    <MESSAGE value="Added first shot at mariadb container. dummy name for value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added first shot at mariadb container. dummy name for value" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

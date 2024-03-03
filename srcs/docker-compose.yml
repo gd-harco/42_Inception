@@ -3,6 +3,8 @@ services:
 
   #nginx server
   nginx:
+    depends_on:
+      - wordpress
     image: nginx
     container_name: nginx
     ports:
@@ -18,6 +20,8 @@ services:
 
   #Wordpress &PHP
   wordpress:
+    depends_on:
+      - mariadb
     image: wordpress
     container_name: wordpress
     build:
@@ -29,6 +33,19 @@ services:
     volumes:
       - WordPress:/var/www/html
 
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    build:
+      context: requirements/mariadb
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - inception
+    volumes:
+      - DataBase:/var/lib/mysql
+
+
 volumes:
   WordPress:
     driver: local
@@ -36,6 +53,12 @@ volumes:
       type: 'none'
       o: 'bind'
       device: /home/gd-harco/data/wordpress
+  DataBase:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: /home/gd-harco/data/mariadb
 
 networks:
   inception:

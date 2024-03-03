@@ -12,7 +12,7 @@ RUN	apt-get update \
     	php-fpm \
     	php-mysql \
     	less \
-#    	mariadb-client \
+    	mariadb-client \
     	--no-install-recommends -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
@@ -20,7 +20,7 @@ RUN	apt-get update \
 #si commande config create faile, ne pas renommer wp-cli.phar
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
-    && mv wp-cli.phar /usr/local/bin/wp
+    && mv wp-cli.phar /usr/local/bin/wp-cli.phar
 
 COPY script/wpconfig.sh ./wpconfig.sh
 
