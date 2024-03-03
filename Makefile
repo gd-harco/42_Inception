@@ -29,8 +29,9 @@ bg_up:
 	${COMP_CMD} -f ${COMPOSE_PATH} up --build -d
 
 volumes:
+	sudo rm -rf ${VOLUMES_PATH}/wordpress ${VOLUMES_PATH}/wordpress
 	${MKDIR} ${VOLUMES_PATH}/wordpress
-	${MKDIR} ${VOLUMES_PATH}/mariadb
+	${MKDIR} ${VOLUMES_PATH}/wordpress
 
 re:
 	make down

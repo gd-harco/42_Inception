@@ -27,4 +27,4 @@ EXPOSE 3306
 
 CMD ["mariadbd", "--bind-address=0.0.0.0"]
 
-#wp config create --dbname=dummy_name --dbuser=db_user --dbhost=mariadb:3306 --dbpass=pass --allow-root
+#wp-cli.phar config create --dbname=dummy_name --dbuser=db_user --dbhost=mariadb:3306 --dbpass=pass --allow-root
