@@ -18,6 +18,8 @@ nginx :
 wp :
 	docker build srcs/requirements/wordpress -t wordpress
 
+maria:
+	docker build srcs/requirements/mariadb -t mariadb
 up:
 	make volumes
 	${COMP_CMD} -f ${COMPOSE_PATH} up --build
