@@ -1,11 +1,28 @@
-#!/usr/bin/bash
+#! /bin/sh
 
-wpInstallPath=/var/www/html/
+if [ ! -f "./wp-config.php" ];
+then
+	>&2 echo Started Wordpress download
+	wp core download --allow-root
 
-#only for test, remove when proper install is done
-rm -rf $wpInstallPath
+	wp config create --allow-root \
+				 --dbname=$DB_NAME \
+				 --dbuser=$DB_USER \
+				 --dbpass=$DB_USER_PASS \
+				 --dbhost=mariadb:3306
 
-wp-cli.phar core download --path=$wpInstallPath --allow-root
+	wp db create --allow-root
+
+	wp core install --allow-root \
+					--url="gd-harco.42.fr" \
+					--title="Projet de merde" \
+					--admin_user="$WP_ADMIN_USER" \
+					--admin_password="$WP_ADMIN_PASS" \
+					--admin_email="$WP_ADMIN_MAIL"
+
+else
+	>&2 echo Wordpress already installed
+fi
 
 # php-fpm start
 mkdir -p /run/php/
