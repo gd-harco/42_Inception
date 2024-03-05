@@ -1,30 +1,33 @@
-FROM debian:11-slim
+FROM debian:11
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
-RUN apt-get update \
-    && apt-get upgrade
+# Import environment variables
+ARG DB_ROOT_PASS
+ARG DB_NAME
+ARG DB_USER
+ARG DB_USER_PASS
 
-RUN apt-get install curl	\
-    ca-certificates	\
-    mariadb-server \
-    --no-install-recommends -y \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# Install MariaDB
+RUN apt-get update -y && \
+	apt-get upgrade -y && \
+	apt-get install -y mariadb-server && \
+	apt-get clean && \
+	rm -fr /var/lib/apt/lists/*
 
-#sale mais facilite le debug
-RUN service mariadb start && mysql -u root -prootpass -e "CREATE DATABASE IF NOT EXISTS dummy_name;" \
-     -e "CREATE USER 'db_user'@'%' IDENTIFIED BY 'pass';" \
-     -e "GRANT ALL PRIVILEGES ON dummy_name.* TO 'db_user'@'%';" \
-     -e "FLUSH PRIVILEGES;"
-RUN service mariadb start && mysqladmin -u root -prootpass shutdown
+# Create a database
+RUN service mariadb start && \
+	mariadb -u root -p"${DB_ROOT_PASS}" \
+					-e "CREATE DATABASE IF NOT EXISTS ${DB_NAME};" \
+					-e "CREATE USER IF NOT EXISTS '${DB_USER}'@'%' IDENTIFIED BY '${DB_USER_PASS}';" \
+					-e "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'%';" \
+					-e "FLUSH PRIVILEGES;"
 
-COPY ./my.cnf /etc/mysql/my.cnf
-
-RUN chmod +x /usr/local/bin
-
+# expose MariaDB port
 EXPOSE 3306
 
-CMD ["mariadbd", "--bind-address=0.0.0.0"]
+# Start MariaDB
+CMD [ "mariadbd", "--bind-address=0.0.0.0" ]
 
 #wp-cli.phar config create --dbname=dummy_name --dbuser=db_user --dbhost=mariadb:3306 --dbpass=pass --allow-root
+
