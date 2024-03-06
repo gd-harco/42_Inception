@@ -1,4 +1,6 @@
-FROM debian:11-slim
+############ NGINX DOCKERFILE ############
+
+FROM debian:oldstable
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 

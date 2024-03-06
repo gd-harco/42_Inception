@@ -1,4 +1,6 @@
-FROM debian:11
+############ MARIADB DOCKERFILE ############
+
+FROM debian:oldstable
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
@@ -27,6 +29,3 @@ EXPOSE 3306
 
 # Start MariaDB
 CMD [ "mariadbd", "--bind-address=0.0.0.0" ]
-
-#wp-cli.phar config create --dbname=dummy_name --dbuser=db_user --dbhost=mariadb:3306 --dbpass=pass --allow-root
-

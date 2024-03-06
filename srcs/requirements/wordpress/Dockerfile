@@ -1,4 +1,6 @@
-FROM debian:11-slim
+############ WP DOCKERFILE ############
+
+FROM debian:oldstable
 
 LABEL createdBy="gd-harco" mail="gd-harco@student.42lyon.fr"
 
@@ -29,4 +31,4 @@ COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 #aucune action basique, juste une norme
 EXPOSE 9000
 
-CMD ["/bin/sh", "wpconfig.sh"]
+CMD ["/bin/sh", "/var/www/html/wpconfig.sh"]
