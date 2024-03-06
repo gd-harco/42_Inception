@@ -37,3 +37,5 @@ re:
 	make up
 down:
 	${COMP_CMD} -f ${COMPOSE_PATH} down --rmi all -v --remove-orphans
+
+.phony: nginx wp maria up bg_up volumes re
